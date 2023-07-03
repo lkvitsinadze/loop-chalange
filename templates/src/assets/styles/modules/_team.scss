@@ -76,14 +76,17 @@
             &:hover {
                 z-index: 5;
                 transition: z-index 0s 0ms;
-
-                .team-list__item__img {
-                }
                 
                 .team-list__item__info {
                     transition-duration: 400ms;
                     transform: translateX(100%);
                     opacity: 1;
+                }
+            }
+
+            &.last:hover {
+                .team-list__item__info {
+                    transform: translateX(-100%);
                 }
             }
         }

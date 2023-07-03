@@ -100,7 +100,10 @@ export default {
 			</ul>
 		</div>
         <div class="team-list">
-            <div class="team-list__item" :style="{'width': itemWidth}" v-for="member in members" :key="member.id">
+            <div  v-for="(member, index) in members" :key="member.id"
+				class="team-list__item"
+				:class="{'last': (index + 1) % meta.limit == 0}"
+				:style="{'width': itemWidth}">
                 <div class="team-list__item__info">
                     <h5 class="h5 color-primary">{{ member.name }}</h5>
                     <p class="text">{{ member.duties }}</p>
@@ -111,10 +114,10 @@ export default {
             </div>
 		</div>
 		<div class="team-pagination">
-            <a href="#" 
+            <a href="#"
 			v-for="size in [4, 5, 6]"
 			:key="size"
-			 @click.prevent="updateGridSize(size)"
+			@click.prevent="updateGridSize(size)"
 			class="team-pagination__item"
 			:class="{'active': meta.limit == size}">{{size}}</a>
 		</div>
