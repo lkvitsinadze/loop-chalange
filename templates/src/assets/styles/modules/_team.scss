@@ -1,0 +1,123 @@
+.team {
+    background-color: $color-dark;
+    padding: 180px 0;
+
+    .team-header {
+        margin-bottom: 130px;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+    }
+
+    .team-filter {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        text-transform: uppercase;
+
+        &__item {
+            padding: 10px;
+            color: $color-light;
+            margin-right: 16px;
+            font-weight: 700;
+            line-height: 120%;
+            letter-spacing: 1.28px;
+
+            &.active {
+                color: $color-primary;
+            }
+        }
+    }
+
+    .team-list {
+        display: flex;
+        flex-wrap: wrap;
+
+        &__item {
+            width: 20%;
+            position: relative;
+            cursor: pointer;
+            z-index: 0;
+            transition: z-index 0s 200ms;
+
+            &__img {
+                position: relative;
+                z-index: 3;
+
+                img {
+                    object-fit: cover;
+                    object-position: center;
+                    width: 100%;
+                    height: 100%;
+                    aspect-ratio: 1/1;
+                }
+            }
+
+            &__info {
+                opacity: 0;
+                position: absolute;
+                background: #fff;
+                top: 0;
+                left: 0%;
+                width: 100%;
+                height: 100%;
+                padding: 24px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                z-index: 2;
+                transition: transform 200ms $ease-in, opacity 200ms $ease-in;
+
+                .text {
+                    line-height: 1.8em;
+                }
+            }
+
+            &:hover {
+                z-index: 5;
+                transition: z-index 0s 0ms;
+
+                .team-list__item__img {
+                }
+                
+                .team-list__item__info {
+                    transition-duration: 400ms;
+                    transform: translateX(100%);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .team-pagination {
+        display: flex;
+        justify-content: flex-end;
+        margin: 14px;
+
+        &__item {
+            color: $color-light;
+            padding: 10px;
+            margin-left: 16px;
+
+            &.active {
+                border-bottom: 1px solid red;
+            }
+        }
+    }
+
+    .load-more {
+        margin: auto;
+        margin-top: 28px;
+        display: block;
+        background-color: $color-light;
+        color: $color-dark;
+        padding: 24px 64px;
+        font-weight: 700;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+
+        &.disabled {
+            opacity: 0.5;
+        }
+    }
+}

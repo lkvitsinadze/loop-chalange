@@ -5,18 +5,21 @@
 
 	&__inner {
 		@include grid;
+		direction: rtl;
 	}
 
 	&__visual {
 		grid-column: 2 / span 3;
 		aspect-ratio: 1 / 1;
-		margin-right: -$page-padding-small;
+		// margin-right: -$page-padding-small;
 		line-height: 0;
 
 		@include mq(tablet) {
-			margin-right: -$page-padding-big;
-			grid-column: 3 / span 10;
+			// margin-right: -$page-padding-big;
+			// grid-column: 5 / span 7;
 			aspect-ratio: 820 / 410;
+			grid-column: 1/span 7;
+			aspect-ratio: 820/410;
 		}
 
 		&__image {

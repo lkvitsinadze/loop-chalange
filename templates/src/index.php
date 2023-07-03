@@ -117,7 +117,7 @@ include($root_path . '/partials/head.php');
 </section>
 
 <section class="visual">
-	<div class="container">
+	<div class="">
 		<div class="visual__inner">
 			<div class="visual__visual">
 				<?php echo generate_component_image([
@@ -132,6 +132,10 @@ include($root_path . '/partials/head.php');
 			</div>
 		</div>
 	</div>
+</section>
+
+<section class="team">
+	<team data-component='{"factory": "vue"}'></team>
 </section>
 
 <footer class="footer">
