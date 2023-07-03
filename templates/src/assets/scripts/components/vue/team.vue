@@ -45,6 +45,9 @@ export default {
 			this.meta.duty = duty;
 			this.init();
 		},
+		isLastOne (index) {
+			return (index + 1) % this.meta.limit === 0 || index === this.members.length - 1;
+		},
 	},
 	async mounted () {
 		this.init();
@@ -102,7 +105,7 @@ export default {
         <div class="team-list">
             <div  v-for="(member, index) in members" :key="member.id"
 				class="team-list__item"
-				:class="{'last': (index + 1) % meta.limit == 0}"
+				:class="{'last': isLastOne(index)}"
 				:style="{'width': itemWidth}">
                 <div class="team-list__item__info">
                     <h5 class="h5 color-primary">{{ member.name }}</h5>
