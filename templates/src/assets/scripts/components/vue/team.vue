@@ -121,6 +121,6 @@ export default {
 			class="team-pagination__item"
 			:class="{'active': meta.limit == size}">{{size}}</a>
 		</div>
-        <button @click="loadMore" class="load-more color-light">Load more</button>
+        <button @click="loadMore" class="load-more color-light"><span>Load more</span></button>
     </div>
 </template>

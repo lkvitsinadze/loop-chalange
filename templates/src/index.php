@@ -149,14 +149,14 @@ include($root_path . '/partials/head.php');
 			</div>
 			<div class="footer__right">
 				<ul class="site-map">
-					<li><a href="#" class="site-map__item color-light">About us</a></li>
-					<li><a href="#" class="site-map__item color-light">Gallery</a></li>
-					<li><a href="#" class="site-map__item color-light">Crew</a></li>
-					<li><a href="#" class="site-map__item color-light">Contact us</a></li>
-					<li><a href="#" class="site-map__item color-light">Impressum</a></li>
-					<li><a href="#" class="site-map__item color-light">Datenschutz</a></li>
-					<li><a href="#" class="site-map__item color-light">Rechtliches</a></li>
-					<li><a href="#" class="site-map__item color-light">Copyright</a></li>
+					<li><a href="#" class="site-map__item">About us</a></li>
+					<li><a href="#" class="site-map__item">Gallery</a></li>
+					<li><a href="#" class="site-map__item">Crew</a></li>
+					<li><a href="#" class="site-map__item">Contact us</a></li>
+					<li><a href="#" class="site-map__item">Impressum</a></li>
+					<li><a href="#" class="site-map__item">Datenschutz</a></li>
+					<li><a href="#" class="site-map__item">Rechtliches</a></li>
+					<li><a href="#" class="site-map__item">Copyright</a></li>
 				</ul>
 				<ul class="social-media">
 					<li>

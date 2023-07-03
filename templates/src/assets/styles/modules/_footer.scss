@@ -28,6 +28,12 @@
             line-height: 1.8em;
             padding: 10px;
             display: inline-block;
+            color: $color-light;
+            transition: $base_link_transition;
+
+            &:hover {
+                color: $color-dark;
+            }
         }
     }
 
@@ -41,9 +47,17 @@
         justify-content: space-between;
         
         &__item {
+            transition: $base_link_transition;
+
             svg {
                 color: $color-light;
                 font-size: 24px;
+            }
+
+            &:hover {
+                svg {
+                    color: $color-dark;
+                } 
             }
         }
     }

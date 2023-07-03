@@ -28,7 +28,13 @@
 		&__image {
 			@include object-fit(cover);
 			clip-path: polygon(0% 0%, 100% 0, 100% 86%, 50% 100%, 0 86%);
+
+			@include mq(desktop){
+				clip-path: polygon(0% 0%, 100% 0, 100% 94%, 50% 100%, 0 94%);			
+			}
 		}
+
+		
 	}
 
 	&__inner {
